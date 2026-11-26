@@ -50,7 +50,7 @@ function renderTable(data) {
     return;
   }
 
-  data.forEach((item, index) => {
+  [...data].reverse().forEach((item, index) => {
     const row = document.createElement('tr');
     addCell(row, String(index + 1));
     addCell(row, item.NAMA || '');
